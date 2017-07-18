@@ -14,7 +14,7 @@ public class NetworkUtils {
     private final static String MOVIE_IMAGE_BASE_URL = "http://image.tmdb.org/t/p/w500";
 
     private final static String MOVIE_DB_BASE_URL = "http://api.themoviedb.org/3/movie/";
-    private final static String API_KEY = "02f5881e0bcbaac43e7595337872da18";
+    private final static String API_KEY = "YOUR_API_KEY_VALUE";
 
     private final static String QUERY_KEY = "api_key";
 
