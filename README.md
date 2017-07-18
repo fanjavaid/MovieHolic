@@ -1,4 +1,5 @@
 # MovieHolic
 Udacity Movie App
 
-[Imgur](http://i.imgur.com/BsS9pP5.gifv)
+![alt text](http://i.imgur.com/BsS9pP5.gif "Logo Title Text 1")
+
