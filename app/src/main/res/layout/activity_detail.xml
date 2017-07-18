@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.movieholic.DetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_movie_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@color/colorAccent"
+            tools:text="Movie Title"
+            android:textSize="32sp"
+            android:textColor="@android:color/white"
+            android:paddingTop="40dp"
+            android:paddingLeft="20dp"
+            android:paddingBottom="40dp"
+            android:paddingRight="20dp"/>
+
+        <ImageView
+            android:id="@+id/iv_movie_poster"
+            android:contentDescription="@string/text_poster_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/tv_movie_title"
+            tools:src="@drawable/img_placeholder"/>
+
+        <TextView
+            android:id="@+id/tv_movie_release_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_toEndOf="@id/iv_movie_poster"
+            android:layout_toRightOf="@id/iv_movie_poster"
+            android:layout_below="@id/tv_movie_title"
+            android:textSize="30sp"
+            tools:text="2015"/>
+
+        <TextView
+            android:id="@+id/tv_movie_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_toEndOf="@id/iv_movie_poster"
+            android:layout_toRightOf="@id/iv_movie_poster"
+            android:layout_below="@id/tv_movie_release_date"
+            android:textSize="20sp"
+            android:textStyle="italic|bold"
+            tools:text="120min"/>
+
+        <TextView
+            android:id="@+id/tv_movie_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_toEndOf="@id/iv_movie_poster"
+            android:layout_toRightOf="@id/iv_movie_poster"
+            android:layout_below="@id/tv_movie_duration"
+            android:textColor="@android:color/black"
+            tools:text="8.1/10"/>
+
+        <Button
+            android:id="@+id/btn_movie_favorite"
+            style="@style/FavoriteButton"
+            android:text="@string/text_mark_favorite"
+            android:onClick="addToFavorite"/>
+
+        <Button
+            android:id="@+id/btn_remove_movie_favorite"
+            style="@style/FavoriteButton"
+            android:text="@string/text_remove_favorite"
+            android:onClick="removeFromFavorite"/>
+
+        <TextView
+            android:id="@+id/tv_movie_summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/iv_movie_poster"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4sp"
+            tools:text="Diana was born and raised on the hidden island of Themyscira, home to the Amazon race of warrior women created by the gods of Mount Olympus to protect humankind. In the distant past, Ares, the god of war, slew all his fellow gods, but his father, Zeus, struck him down"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tv_movie_summary"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_movie_summary"
+            android:layout_marginTop="36dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="16dp"
+                android:textColor="@android:color/black"
+                android:text="@string/text_title_trailer"
+                android:textSize="20sp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_trailers"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                tools:listitem="@layout/trailer_item"
+                android:visibility="gone"/>
+
+            <ProgressBar
+                android:id="@+id/pb_loading_indicator"
+                android:layout_width="@dimen/pb_size"
+                android:layout_height="@dimen/pb_size"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

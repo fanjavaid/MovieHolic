@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Movie Holic</string>
+
+    <!-- Main menu action -->
+    <string name="action_popular">Popular</string>
+    <string name="action_highest_rate">Top Rated</string>
+    <string name="action_favourite">Favourite</string>
+    <string name="action_review">Reviews</string>
+
+    <string name="text_mark_favorite">Mark as\nFavorite</string>
+    <string name="text_remove_favorite">Remove from\nFavorite</string>
+    <string name="text_title_trailer">Trailers</string>
+    <string name="text_poster_desc">Movie Poster</string>
+    <string name="text_play_icon_desc">Play Icon</string>
+
+    <string name="text_duration">%dmin</string>
+    <string name="text_rating">%.1f/10</string>
+</resources>
