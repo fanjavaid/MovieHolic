@@ -7,6 +7,7 @@ import org.json.JSONObject;
 public class JsonUtils {
     public static final String DATA_MOVIE = "movie";
     public static final String DATA_TRAILER = "trailer";
+    public static final String DATA_REVIEW = "review";
 
     private static final String KEY_ID = "id";
     private static final String KEY_VOTE_AVERAGE = "vote_average";
@@ -17,6 +18,10 @@ public class JsonUtils {
 
     private static final String KEY_UTUBEKEY = "key";
     private static final String KEY_NAME = "name";
+
+    private static final String KEY_REVIEW_ID = "id";
+    private static final String KEY_REVIEW_AUTHOR = "author";
+    private static final String KEY_REVIEW_CONTENT = "content";
 
     public static String[] toStringArray(JSONArray jsonArray, String dataType) throws JSONException {
         String[] datas = new String[jsonArray.length()];
@@ -42,6 +47,12 @@ public class JsonUtils {
                 builder.append(result.getString(KEY_UTUBEKEY))
                         .append("|")
                         .append(result.getString(KEY_NAME));
+            } else if (dataType.equals(DATA_REVIEW)) {
+                builder.append(result.getString(KEY_REVIEW_ID))
+                        .append("|")
+                        .append(result.getString(KEY_REVIEW_AUTHOR))
+                        .append("|")
+                        .append(result.getString(KEY_REVIEW_CONTENT));
             }
 
             datas[i] = builder.toString();
